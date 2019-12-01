@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="jumbotron">
+    <div class="container">
+        <h2>Please copy and paste the review below</h2>
+        <form action="/start" method="post">
+            <label for="comments"></label><textarea name="mail" id="comments" style="width:96%;height:90px;border:none;padding:2%;font:22px/30px sans-serif;"></textarea>
+            <input type="submit" value="Submit" style="background-color:yellowgreen;color:white;font-size:18px;border:none;padding:8px;">
+        </form>
+    </div>
+</div>
+{% endblock %}

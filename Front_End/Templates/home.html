@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="jumbotron">
+    <div class="container">
+        <h1><b>Yelp Review Analysis</b></h1>
+        <p>Sentiment Analysis to Predict Ratings</p>
+        <br>
+        <p><a class="btn btn-primary btn-lg" href="/start" role="button">Get Started! &raquo;</a></p>
+    </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4">
+            <img class="img" src="images/our_dataset.jpg" width="210" height="160">
+            <h2>Dataset</h2>
+            <p>To train our model, we used the Yelp public dataset which is a conglomerate of 6,685,900 reviews for 192,609 businesses. </p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <img class="img" src="images/sentiment_analysis.jpg" width="210" height="160">
+            <h2>Our Model</h2>
+            <p>We performed a sentiment analysis on the text from our reviews to predict the rating of the user.</p>
+        </div>
+        <div class="col-lg-4">
+            <img class="img" src="images/purpose_rating.jpg" width="210" height="160">
+            <h2>Purpose</h2>
+            <p>Introduces the idea of a suggestive rating. This is similar to an autofill feature allowing the user to review their experience at
+            an restaurant or service and the system will provide them with a suggested rating so they can judge whether their rating aligns with their review.</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
