@@ -5,7 +5,6 @@ Members:
 
 * Daniel Tang - Scrum Lead, Full Stack
 * Patrick Han - Data Science Geek
-* Michael Price - Intern :)
 
 Instructions for Front End: Open app.py in PyCharm or desired IDE and do ```Flask Run``` in frontend directory in terminal. This should load the front end.
 
