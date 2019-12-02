@@ -2,7 +2,9 @@
 {% block body %}
 <div class="jumbotron">
     <div class="container">
-        <p>{{rating}}</p>
+        <p><b>Your Review: </b>{{review}}</p>
+        <p><b>{{rating}}</b></p>
+        <p><a class="btn btn-primary btn-lg" href="/start" role="button">Try Another Review! &raquo;</a></p>
     </div>
 </div>
 {% endblock %}
