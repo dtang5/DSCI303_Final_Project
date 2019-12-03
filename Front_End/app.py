@@ -27,7 +27,7 @@ def start_logistic_post():
     predicted_rating = "Based on your review, your rating for this merchant or service should be around a " + str(int(tfidf_predict_rating_logistic(unprocessed_review)[0])) + " star! :)"
     return render_template('rating.html', review=mail, rating=predicted_rating)
 
-@app.route('/startSVM', methods=['POST'])
+@app.route('/startSVMCount', methods=['POST'])
 def start_SVM_post():
     mail = request.form['mail']
     unprocessed_review = [mail]
