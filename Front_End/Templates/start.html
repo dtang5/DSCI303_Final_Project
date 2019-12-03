@@ -6,8 +6,13 @@
         <h5>(For most accurate prediction, please write at least 20 words)</h5>
         <form method="post">
             <label for="comments"></label><textarea name="mail" id="comments" style="width:96%;height:90px;border:none;padding:2%;font:22px/30px sans-serif;"></textarea>
-            <input type="submit" formaction = "/startLogistic" value="TFIDF/Multinomial Logistic Regression" style="background-color:yellowgreen;color:white;font-size:18px;border:none;padding:8px;">
-            <input type="submit" formaction = "/startSVM" value="Bag of Words/Support Vector Machine" style="background-color:yellowgreen;color:white;font-size:18px;border:none;padding:8px;">
+            <input type="submit" formaction = "/startLogisticTFIDF" value="TFIDF/Multinomial Logistic Regression" style="background-color:yellowgreen;color:white;font-size:18px;border:green;border-width: medium;padding:8px;">
+            <input type="submit" formaction = "/startSVMCount" value="Bag of Words/Support Vector Machine" style="background-color:yellowgreen;color:white;font-size:18px;border:green;border-width: medium;padding:8px;">
+<!--            <input type="submit" formaction = "/startRFTFIDF" value="TFIDF/Random Forest (50 Trees)" style="background-color:yellowgreen;color:white;font-size:18px;border:green;border-width: medium;padding:8px;">-->
+            <input type="submit" formaction = "/startSVMTFIDF" value="TFIDF/Support Vector Machine" style="background-color:yellowgreen;color:white;font-size:18px;border:green;border-width: medium;padding:8px;">
+            <br>
+            <br>
+            <input type="submit" formaction = "/startAverage" value="Average the Models!" style="background-color:yellowgreen;color:white;font-size:18px;border:green;border-width: medium;padding:8px;">
         </form>
     </div>
 </div>

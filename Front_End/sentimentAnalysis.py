@@ -12,7 +12,10 @@ tfidf_vectorizer = pickle.load(open('./tfidf_vectorizer_Py2.sav', 'rb'))
 clf400 = pickle.load(open('./trained_mult_logistic_reg_model_tfidf_Py2.sav', 'rb'))
 
 count_vectorizer = pickle.load(open('./count_vectorizer_Py2.sav', 'rb'))
-svm = pickle.load(open('./trained_svm_model_count_Py2.sav', 'rb'))
+count_svm = pickle.load(open('./trained_svm_model_count_Py2.sav', 'rb'))
+
+# tfidf_rf = pickle.load(open('./trained_random_forest_model_tfidf_Py2.sav', 'rb'))
+tfidf_svm =  pickle.load(open('./trained_svm_model_tfidf_Py2.sav', 'rb'))
 
 
 def convert_lower_case(data):
@@ -124,7 +127,28 @@ def count_predict_rating_svm(unpreprocessed_data):
     """
     preprocessed_sample = preprocess(unpreprocessed_data)
     sample_count = count_vectorizer.transform(preprocessed_sample)
-    return svm.predict(sample_count)
+    return count_svm.predict(sample_count)
+
+# def tfidf_predict_rating_random_forest(unpreprocessed_data):
+#     """
+#     trained_skmodel: the random forest (50 trees) trained model returned by sklearn (after fit)
+#     count_vectorizer: the vectorizer used (after applying fit_transform). Used to convert unseen raw data to tfidf vector);
+#     unpreprocessed_data: an array or dataframe column of strings corresponding to unseen reviews
+#     """
+#     preprocessed_sample = preprocess(unpreprocessed_data)
+#     sample_count = tfidf_vectorizer.transform(preprocessed_sample)
+#     return tfidf_rf.predict(sample_count)
+
+def tfidf_predict_rating_svm(unpreprocessed_data):
+    """
+    trained_skmodel: the svm trained model returned by sklearn (after fit)
+    count_vectorizer: the vectorizer used (after applying fit_transform). Used to convert unseen raw data to tfidf vector);
+    unpreprocessed_data: an array or dataframe column of strings corresponding to unseen reviews
+    """
+    preprocessed_sample = preprocess(unpreprocessed_data)
+    sample_count = tfidf_vectorizer.transform(preprocessed_sample)
+    return tfidf_svm.predict(sample_count)
+
 
 # if __name__ == '__main__':
 #     print count_predict_rating_svm(
