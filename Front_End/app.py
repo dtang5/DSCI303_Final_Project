@@ -4,8 +4,6 @@ from flask import Flask, render_template, request
 from sentimentAnalysis import tfidf_predict_rating_logistic, count_predict_rating_svm, tfidf_predict_rating_svm
 from statistics import mean
 
-from sentimentAnalysis import tfidf_predict_rating_logistic, count_predict_rating_svm
-
 
 app = Flask(__name__)
 
